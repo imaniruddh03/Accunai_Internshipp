@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+nav {
+  background-color: #333;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.9s ease; 
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease; 
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6f7ff; 
+}
+button {
+  background-color: #ff4d4f;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #d9363e; 
+  transform: scale(1.05); 
+}
+button:active {
+  transform: scale(0.95); 
+}
+
+.form {
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: buttonClick 0.2s ease;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    padding: 10px 0;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  input {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  tr:hover {
+    background-color: #e6f7ff;
+  }
+}
+
